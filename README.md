@@ -14,4 +14,4 @@ J6 - Constructors & Inheritance
 J7 - Interfaces
 J8 - HashMaps and Streams
 J9 - Testing with JUnit
-J10 - Static Methods (?) not really a individual directory imo
+J10 - Static Methods (?) not really a individual directory imo.
