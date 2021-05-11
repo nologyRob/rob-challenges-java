@@ -1,5 +1,4 @@
-package com.nology;
-
+package com.nology.j1;
 import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;

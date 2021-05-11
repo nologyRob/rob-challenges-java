@@ -1,6 +1,4 @@
-package com.nology;
-
-import java.util.Scanner;
+package com.nology.j1;
 
 public class Challenge {
 
@@ -66,4 +64,5 @@ public class Challenge {
 
         return x && (y || z);
     }
- }
+
+}
