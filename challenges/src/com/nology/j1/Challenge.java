@@ -1,5 +1,7 @@
 package com.nology.j1;
 
+import java.util.List;
+
 public class Challenge {
 
     public Challenge() {
@@ -7,14 +9,23 @@ public class Challenge {
 
     // BEGINNER
 
-    // write the code to programmatically return the largest number from the 2 parameters (num1, num2) passed to the method
+    /***
+     * A method to find the largest number
+     * @param num1 a number to be compared with the other parameter
+     * @param num2 a number to be compared with the other parameter
+     * @return returns the larger of the 2 numbers passed as paramters
+     */
     public int findLargestNumber(int num1, int num2) {
         return Math.max(num1, num2);
     }
 
 
-    // write the code to programmatically return the longest string from the 2 parameters (string1, string2) passed to the method
-    // it should return "These two are the same length!" if the strings are not different lengths
+    /***
+     * A method to find the longest string
+     * @param string1 a string to be compared with the other parameter
+     * @param string2 a string to be compared with the other parameter
+     * @return returns the larger of the 2 strings or "These two are the same length!" if they are of equal length
+     */
     public String findLongestString(String string1, String string2) {
         if (string1.length() > string2.length()) {
             return string1;
@@ -24,9 +35,16 @@ public class Challenge {
     }
 
 
+
     // INTERMEDIATE
 
-    // write the code that programmatically reads in two floating-point numbers and tests whether they are the same up to three decimal places.
+
+    /***
+     * A method to check whether 2 numbers are equal to 4dp
+     * @param num1 a double to be compared with the other parameter
+     * @param num2 a double to be compared with the other parameter
+     * @return a string to specify whether the 2 params match to 3dp
+     */
     public String compareTwoNumbers(double num1, double num2) {
         if (Math.round(num1 * 1000) == Math.round(num2 * 1000)){
             return "These numbers are really equal to 3 decimal places!";
@@ -35,9 +53,13 @@ public class Challenge {
         }
     }
 
-    // write the code that keeps a number from the user and generates an integer between 1 and 7 and displays the name of the weekday.
-    // e.g. 1 would return "Monday"
-    // if a number outside the range is entered the method should return "Not a valid day range! The number needs to be from 1-7"
+
+
+    /***
+     * A method to determine which day of the week it is from a numeric input
+     * @param day a Integer from 1-7 (that corresponds to the days of the week)
+     * @return the day that corresponds to the number that was passed to the method as a parameter or "Not a valid day range! The number needs to be from 1-7" if param passed is outside of the range
+     */
     public String getDayName(int day) {
         String dayName = "";
         switch (day) {
@@ -57,6 +79,12 @@ public class Challenge {
     // ADVANCED
 
     // write a program that takes a year from user and print whether that year is a leap year or not
+
+    /***
+     * A method to determine whether any given year is a leap year
+     * @param year the year to be checked
+     * @return returns true if it is a leap year, false if not
+     */
     public boolean leapYearChecker(int year) {
         boolean x = (year % 4) == 0;
         boolean y = (year % 100) != 0;
