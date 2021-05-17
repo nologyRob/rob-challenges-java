@@ -4,7 +4,7 @@ public class Challenge {
     public Challenge() {
     }
 
-    // BEGINNER
+    // -------------- FOUNDATION --------------
 
     /***
      * Write a method that concatenates two strings together with a space in between them.
@@ -52,9 +52,7 @@ public class Challenge {
         return false;
     }
 
-
-
-    // INTERMEDIATE
+    // -------------- INTERMEDIATE --------------
 
     /***
      * Write a method called printMegaBytesAndKiloBytes that has 1 parameter of type int with the name kiloBytes.
@@ -72,8 +70,7 @@ public class Challenge {
         }
     }
 
-
-    // ADVANCED
+    // -------------- ADVANCED --------------
 
     /***
      * write a method to compute the future investment value at a given interest rate for a specified number of years.
@@ -87,7 +84,6 @@ public class Challenge {
         double total = initialInvestment;
         for (int i = 0; i <= years; i++) {
             total += (total * rateOfInterest);
-//            System.out.println(total);
         }
         return "You now have " + Math.round(total);
     }

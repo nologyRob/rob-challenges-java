@@ -1,13 +1,11 @@
 package com.nology.j1;
 
-import java.util.List;
-
 public class Challenge {
 
     public Challenge() {
     }
 
-    // BEGINNER
+    // -------------- FOUNDATION --------------
 
     /***
      * A method to find the largest number
@@ -16,9 +14,8 @@ public class Challenge {
      * @return returns the larger of the 2 numbers passed as paramters
      */
     public int findLargestNumber(int num1, int num2) {
-        return Math.max(num1, num2);
+        return -1;
     }
-
 
     /***
      * A method to find the longest string
@@ -27,17 +24,10 @@ public class Challenge {
      * @return returns the larger of the 2 strings or "These two are the same length!" if they are of equal length
      */
     public String findLongestString(String string1, String string2) {
-        if (string1.length() > string2.length()) {
-            return string1;
-        } else if (string1.length() < string2.length()) {
-            return  string2;
-        } else return "These two are the same length!";
+        return "";
     }
 
-
-
-    // INTERMEDIATE
-
+    // -------------- INTERMEDIATE --------------
 
     /***
      * A method to check whether 2 numbers are equal to 4dp
@@ -45,15 +35,9 @@ public class Challenge {
      * @param num2 a double to be compared with the other parameter
      * @return a string to specify whether the 2 params match to 3dp
      */
-    public String compareTwoNumbers(double num1, double num2) {
-        if (Math.round(num1 * 1000) == Math.round(num2 * 1000)){
-            return "These numbers are really equal to 3 decimal places!";
-        } else {
-            return "These numbers are not equal to 3 decimal places";
-        }
+    public Boolean compareTwoNumbers(double num1, double num2) {
+        return true;
     }
-
-
 
     /***
      * A method to determine which day of the week it is from a numeric input
@@ -76,9 +60,7 @@ public class Challenge {
         return dayName;
     }
 
-    // ADVANCED
-
-    // write a program that takes a year from user and print whether that year is a leap year or not
+    // -------------- ADVANCED --------------
 
     /***
      * A method to determine whether any given year is a leap year
@@ -92,5 +74,4 @@ public class Challenge {
 
         return x && (y || z);
     }
-
 }

@@ -52,14 +52,14 @@ class ChallengeTest {
     // tests for third challenge
     @Test
     void checkThatTwoPositiveNumbersAreNotEqualToFourDecimalPlaces() {
-        String result = challenge.compareTwoNumbers(12.333, 12.334);
-        assertEquals("These numbers are not equal to 3 decimal places", result);
+        Boolean result = challenge.compareTwoNumbers(12.333, 12.334);
+        assertEquals(false, result);
     }
 
     @Test
     void checkThatTwoPositiveNumbersAreEqualToFourDecimalPlaces()  {
-        String result = challenge.compareTwoNumbers(1.333, 1.333);
-        assertEquals("These numbers are really equal to 3 decimal places!", result);
+        Boolean result = challenge.compareTwoNumbers(1.333, 1.333);
+        assertEquals(true, result);
     }
 
     // tests for fourth challenge
