@@ -28,19 +28,20 @@ class ChallengeTest {
 
     // tests for the second challenge
     @Test
-    void printMegaBytesAndKiloBytes() {
-        String result = challenge.printMegaBytesAndKiloBytes(2220);
-        assertEquals("2220 KB = 2 MB and 172 KB", result);
+    void findMiddleCharacter() {
+        String result = challenge.findMiddleCharacter("Sam");
+        assertEquals("a", result);
     }
 
     @Test
-    void printMegaBytesAndKiloBytesIfParamIsLessThanZero() {
-        String result = challenge.printMegaBytesAndKiloBytes(-2220);
-        assertEquals("Invalid Value", result);
+    void findMiddleCharacterWhenTwoWordsPassedI() {
+        String result = challenge.findMiddleCharacter("Sam Joyce");
+        assertEquals("only one word pls.", result);
     }
 
 
-    // tests for the second challenge
+
+    // tests for the third challenge
     @Test
     void shouldNotWakeUp() {
         boolean result = challenge.shouldWakeUp(true, 22);
@@ -54,4 +55,37 @@ class ChallengeTest {
         assertTrue(result);
     }
 
+
+    // tests for the fourth challenge
+    @Test
+    void printMegaBytesAndKiloBytes() {
+        String result = challenge.printMegaBytesAndKiloBytes(2220);
+        assertEquals("2220 KB = 2 MB and 172 KB", result);
+    }
+
+    @Test
+    void printMegaBytesAndKiloBytesIfParamIsLessThanZero() {
+        String result = challenge.printMegaBytesAndKiloBytes(-2220);
+        assertEquals("Invalid Value", result);
+    }
+
+
+    // tests for the fifth challenge
+    @Test
+    void calculateInvestmentGrowthOver10Years() {
+        String result = challenge.calculateReturn(1000, 10, 0.1);
+        assertEquals("You now have " + 2853, result);
+    }
+
+    @Test
+    void calculateInvestmentGrowthWithInvalidInvestment() {
+        String result = challenge.calculateReturn(-1000, 10, 0.1);
+        assertEquals("initialInvestment & years must be above 0.", result);
+    }
+
+    @Test
+    void calculateInvestmentGrowthWithInvalidYears() {
+        String result = challenge.calculateReturn(1000, -10, 0.1);
+        assertEquals("initialInvestment & years must be above 0.", result);
+    }
 }
