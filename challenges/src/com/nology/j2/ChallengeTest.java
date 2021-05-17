@@ -18,15 +18,12 @@ class ChallengeTest {
     void tearDown() {
     }
 
-    // tests for the first challenge
     @Test
     void correctlyAddsFirstAndSecondNameTogether() {
         String result = challenge.makeFullName("Sam", "Joyce");
         assertEquals("Sam Joyce", result);
     }
 
-
-    // tests for the second challenge
     @Test
     void findMiddleCharacter() {
         String result = challenge.findMiddleCharacter("Sam");
@@ -39,9 +36,6 @@ class ChallengeTest {
         assertEquals("only one word pls.", result);
     }
 
-
-
-    // tests for the third challenge
     @Test
     void shouldNotWakeUp() {
         boolean result = challenge.shouldWakeUp(true, 22);
@@ -55,8 +49,6 @@ class ChallengeTest {
         assertTrue(result);
     }
 
-
-    // tests for the fourth challenge
     @Test
     void printMegaBytesAndKiloBytes() {
         String result = challenge.printMegaBytesAndKiloBytes(2220);
@@ -69,8 +61,6 @@ class ChallengeTest {
         assertEquals("Invalid Value", result);
     }
 
-
-    // tests for the fifth challenge
     @Test
     void calculateInvestmentGrowthOver10Years() {
         String result = challenge.calculateReturn(1000, 10, 0.1);
