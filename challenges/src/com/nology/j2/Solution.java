@@ -11,7 +11,7 @@ public class Solution {
      * Write a method that concatenates two strings together with a space in between them.
      * @param firstName
      * @param lastName
-     * @return returns a string which is the concatenation of the 2 poarameters
+     * @return returns a string which is the concatenation of the 2 parameters
      */
     public String makeFullName(String firstName, String lastName) {
         return firstName + " " +  lastName;
