@@ -2,48 +2,49 @@ package com.nology.classes_03;
 
 public class Employee {
 
-    // 1 - class of an Employee that has...
-    // four variables called
+    // -------------- Foundation -----------------
+
+    // Create a class of an Employee that has four properties ....
     // name: string
     // position: string
     // rating: int
-    // dealsDone: array
+    // completedDeals: array
 
-    // three methods called
-    // readyForPromotion: checks if rating is over 7, if so return true... else false
-    // sumDeals: loops through dealsDone array and totals all the deals done... returns an int which is the total
-    // qualifiesForBonus: checks if rating is 9 or greater and if the dealsDone total is over £100,000
+    // With three methods ....
+    // isPromotable(): checks if rating is over 7, if so return true... else false
+    // calculateCompletedDealsSum(): loops through completedDeals array and totals all the deals completed.. returns an int which is the total
+    // hasBonusQualification: checks if rating is 9 or greater and if the dealsDone total is over £100,000
 
     public String name;
     public String position;
     public int rating;
-    public int[] dealsDone;
+    public int[] completedDeals;
 
-    public Employee(String name, String position, int rating, int[] dealsDone) {
+    public Employee(String name, String position, int rating, int[] completedDeals) {
         this.name = name;
         this.position = position;
         this.rating = rating;
-        this.dealsDone = dealsDone;
+        this.completedDeals = completedDeals;
     }
 
-    public boolean readyForPromotion() {
-        if (rating > 7) {
-            return true;
-        } else return false;
+    public boolean isPromotable() {
+        return rating > 7;
     }
 
-    public int sumDeals() {
+    public int calculateCompletedDealsSum() {
         int total = 0;
-        for (int i = 0; i < dealsDone.length; i++) {
-            total += dealsDone[i];
+        for (int i = 0; i < completedDeals.length; i++) {
+            total += completedDeals[i];
         }
         return total;
     }
 
-    public String qualifiesForBonus() {
-        int totalDealsFigure = sumDeals();
-        if (rating >= 9 && totalDealsFigure > 100_000) {
-            return "Well done, bonus awarded: " + totalDealsFigure * 0.1;
-        } else return "Does no qualify for bonus";
+    public boolean hasBonusQualification() {
+        int totalDealsFigure = calculateCompletedDealsSum();
+        if (rating >= 9 && totalDealsFigure > 100000) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
