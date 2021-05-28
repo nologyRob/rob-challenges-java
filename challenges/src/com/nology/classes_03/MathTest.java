@@ -7,11 +7,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MathTest {
 
-    public Math math;
+    // NOTE: MathSolution needs to be changed to Math
+    public MathSolution math;
 
     @BeforeEach
     void setUp() {
-        this.math = new Math(3.14);
+        // NOTE: MathSolution needs to be changed to Math
+        this.math = new MathSolution(3.14);
     }
 
     @Test
