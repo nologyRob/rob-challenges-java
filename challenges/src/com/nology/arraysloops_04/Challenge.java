@@ -36,13 +36,7 @@ public class Challenge {
      * @return Amount of odd numbers e.g. 3
      */
     public int getAmountOfOddNumbers(int[] numbersArr) {
-        int amountOfOddNumbers = 0;
-        for (int i = 0; i < numbersArr.length; i++) {
-            if (numbersArr[i] % 2 == 1) {
-                amountOfOddNumbers++;
-            }
-        }
-        return amountOfOddNumbers;
+        return -1;
     }
 
     // -------------- INTERMEDIATE --------------
