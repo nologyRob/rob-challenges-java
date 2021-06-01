@@ -19,7 +19,30 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a6e4d6c-01b5-4b45-b739-e8892f179ad5" name="Default Changelist" comment="" />
+    <list default="true" id="2a6e4d6c-01b5-4b45-b739-e8892f179ad5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenges/out/production/Desktop/com/nology/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenges/out/production/Desktop/com/nology/j1/Challenge.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenges/out/production/Desktop/com/nology/j1/ChallengeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenges/out/production/challenges/META-INF/challenges.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenges/target/classes/com/nology/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenges/target/classes/com/nology/a01/introduction/Solution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenges/target/classes/com/nology/arraysloops_04/Challenge.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenges/target/classes/com/nology/arraysloops_04/ChallengeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenges/target/classes/com/nology/arraysloops_04/Solution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenges/target/classes/com/nology/classes_03/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenges/target/classes/com/nology/classes_03/EmployeeSolution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenges/target/classes/com/nology/classes_03/EmployeeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenges/target/classes/com/nology/classes_03/Math.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenges/target/classes/com/nology/classes_03/MathSolution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenges/target/classes/com/nology/classes_03/MathTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenges/target/classes/com/nology/controlflow_02/Challenge.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenges/target/classes/com/nology/controlflow_02/ChallengeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenges/target/classes/com/nology/controlflow_02/Solution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenges/target/classes/com/nology/introduction_01/Challenge.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenges/target/classes/com/nology/introduction_01/ChallengeTest.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
