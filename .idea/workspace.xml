@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,28 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a6e4d6c-01b5-4b45-b739-e8892f179ad5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenges/out/production/Desktop/com/nology/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenges/out/production/Desktop/com/nology/j1/Challenge.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenges/out/production/Desktop/com/nology/j1/ChallengeTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenges/out/production/challenges/META-INF/challenges.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenges/target/classes/com/nology/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenges/target/classes/com/nology/a01/introduction/Solution.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenges/target/classes/com/nology/arraysloops_04/Challenge.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenges/target/classes/com/nology/arraysloops_04/ChallengeTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenges/target/classes/com/nology/arraysloops_04/Solution.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenges/target/classes/com/nology/classes_03/Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenges/target/classes/com/nology/classes_03/EmployeeSolution.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenges/target/classes/com/nology/classes_03/EmployeeTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenges/target/classes/com/nology/classes_03/Math.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenges/target/classes/com/nology/classes_03/MathSolution.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenges/target/classes/com/nology/classes_03/MathTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenges/target/classes/com/nology/controlflow_02/Challenge.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenges/target/classes/com/nology/controlflow_02/ChallengeTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenges/target/classes/com/nology/controlflow_02/Solution.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenges/target/classes/com/nology/introduction_01/Challenge.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenges/target/classes/com/nology/introduction_01/ChallengeTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,8 +61,9 @@
     <property name="create.test.in.the.same.root" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/challenges" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.30628273" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -151,5 +134,15 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ClassNotFoundException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
