@@ -1,4 +1,4 @@
-package com.nology.a01.introduction;
+package com.nology.introduction_01;
 
 public class Solution {
 
