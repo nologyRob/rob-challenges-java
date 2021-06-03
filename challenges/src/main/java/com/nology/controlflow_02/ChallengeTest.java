@@ -20,19 +20,19 @@ class ChallengeTest {
 
     @Test
     void correctlyAddsFirstAndSecondNameTogether() {
-        String result = challenge.makeFullName("Sam", "Joyce");
+        String result = challenge.getFullName("Sam", "Joyce");
         assertEquals("Sam Joyce", result);
     }
 
     @Test
     void findMiddleCharacter() {
-        String result = challenge.findMiddleCharacter("Sam");
+        String result = challenge.getMiddleCharacter("Sam");
         assertEquals("a", result);
     }
 
     @Test
     void findMiddleCharacterWhenTwoWordsPassedI() {
-        String result = challenge.findMiddleCharacter("Sam Joyce");
+        String result = challenge.getMiddleCharacter("Sam Joyce");
         assertEquals("only one word pls.", result);
     }
 
