@@ -44,13 +44,7 @@ public class Challenge {
      * @return A string in the format above if the input is valid, or "Invalid value" if the kiloBytes param is less than 0
      */
     public String printMegaBytesAndKiloBytes(int kiloBytes) {
-        if (kiloBytes < 0) {
-            return "Invalid Value";
-        } else {
-            int megaBytes = (kiloBytes / 1024);
-            int remainder = (kiloBytes % 1024);
-            return kiloBytes + " KB = " + megaBytes + " MB and " + remainder + " KB";
-        }
+        return "";
     }
 
     // -------------- ADVANCED --------------
@@ -63,11 +57,6 @@ public class Challenge {
      * @return returns the total amount after x number of years (including the initial investment
      */
     public String calculateReturn(int initialInvestment, int years, double rateOfInterest) {
-        if (initialInvestment <= 0 || years <= 0) return "initialInvestment & years must be above 0.";
-        double total = initialInvestment;
-        for (int i = 0; i <= years; i++) {
-            total += (total * rateOfInterest);
-        }
-        return "You now have " + Math.round(total);
+        return "";
     }
 }
