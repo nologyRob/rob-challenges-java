@@ -5,83 +5,119 @@ import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ChallengeTest {
-    private Challenge challenge;
+    private Solution challenge;
 
     @BeforeEach
     void setUp() {
-        challenge = new Challenge();
+        challenge = new Solution();
     }
 
     @AfterEach
     void tearDown() {
     }
 
-    // tests for first challenge
+    // --------------  FOUNDATION --------------
+
+    // 01 tests for findLargestNumber challenge
     @Test
-    void findLargestNumberFromTwoIntegers() {
+    void findLargestNumber_ValidIntegers_ReturnsLargest() {
         int result = challenge.findLargestNumber(22, 25);
         assertEquals(25, result);
     }
 
     @Test
-    void findLargestNumberFromTwoEqualNumbers() {
+    void findLargestNumber_EqualIntegers_ReturnsEqual() {
         int result = challenge.findLargestNumber(22, 22);
         assertEquals(22, result);
     }
 
     @Test
-    void findLargestNumberFromTwoNegativeNumbers() {
+    void findLargestNumber_NegativeIntegers_ReturnsLargest() {
         int result = challenge.findLargestNumber(-22, -100);
         assertEquals(-22, result);
     }
 
-
-    // tests for second challenge
+    // 02 tests for findLongestString challenge
     @Test
-    void findLargestStringfromTwoDifferentLengthWords() {
+    void findLargestString_ValidStrings_ReturnsLongest() {
         String result = challenge.findLongestString("Sam", "Andy");
         assertEquals("Andy", result);
     }
 
     @Test
-    void findLargestStringfromTwoWordsWithTheSameLength() {
+    void findLargestString_EqualStrings_ReturnsEqualMessage() {
         String result = challenge.findLongestString("Cattywampus", "Cattywampus");
         assertEquals("These two are the same length!", result);
     }
 
+    // 03 tests for getDiscount challenge
     @Test
-    void getDiscount_WithValidInputs_CorrectDiscount() {
-
+    void getDiscount_ValidInputs_ReturnCorrectDiscount() {
         double result = challenge.getDiscount(100, 10);
         assertEquals(90, result);
-        double resul2 = challenge.getDiscount(27, 5);
-        assertEquals(25.65, resul2);
     }
 
-
-    // tests for third challenge
     @Test
-    void checkThatTwoPositiveNumbersAreNotEqualToFourDecimalPlaces() {
-        Boolean result = challenge.compareTwoNumbers(12.333, 12.334);
+    void getDiscount_ValidInputs_ReturnCorrectDiscountAsDouble() {
+        double result = challenge.getDiscount(27, 5);
+        assertEquals(25.65, result);
+    }
+
+    // -------------- INTERMEDIATE --------------
+
+    // 04 tests for compareTwoNumbers
+    @Test
+    void compareTwoNumbers_ValidInputsNotEqual_ReturnFalse() {
+        Boolean result = challenge.compareTwoNumbers(12.3333, 12.3343);
         assertEquals(false, result);
     }
 
     @Test
-    void checkThatTwoPositiveNumbersAreEqualToFourDecimalPlaces()  {
-        Boolean result = challenge.compareTwoNumbers(1.333, 1.333);
+    void compareTwoNumbers_ValidInputsEqual_ReturnTrue()  {
+        Boolean result = challenge.compareTwoNumbers(1.3333, 1.3333);
         assertEquals(true, result);
     }
 
-    // tests for fourth challenge
+    // 05 tests for getDayName
 
     @Test
-    void findTheDayOfTheWeekGivenValidInput() {
+    void getDayName_ValidInput0_ReturnSunday() {
+        String result = challenge.getDayName(0);
+        assertEquals("Sunday", result);
+    }
+
+    @Test
+    void getDayName_ValidInput1_ReturnMonday() {
+        String result = challenge.getDayName(1);
+        assertEquals("Monday", result);
+    }
+
+    @Test
+    void getDayName_ValidInput2_ReturnTuesday() {
         String result = challenge.getDayName(2);
         assertEquals("Tuesday", result);
     }
 
     @Test
-    void findTheDayOfTheWeekGivenValidInput2() {
+    void getDayName_ValidInput3_ReturnWednesday() {
+        String result = challenge.getDayName(3);
+        assertEquals("Wednesday", result);
+    }
+
+    @Test
+    void getDayName_ValidInput4_ReturnThursday() {
+        String result = challenge.getDayName(4);
+        assertEquals("Thursday", result);
+    }
+
+    @Test
+    void getDayName_ValidInput5_ReturnFriday() {
+        String result = challenge.getDayName(5);
+        assertEquals("Friday", result);
+    }
+
+    @Test
+    void getDayName_ValidInput6_ReturnSaturday() {
         String result = challenge.getDayName(6);
         assertEquals("Saturday", result);
     }
@@ -89,6 +125,6 @@ class ChallengeTest {
     @Test
     void findTheDayOfTheWeekGivenInvalidInput() {
         String result = challenge.getDayName(9);
-        assertEquals("Not a valid day range! The number needs to be from 1-7", result);
+        assertEquals("Not a valid day range! The number needs to be from 0-6", result);
     }
 }

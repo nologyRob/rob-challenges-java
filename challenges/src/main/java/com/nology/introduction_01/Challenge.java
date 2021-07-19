@@ -8,17 +8,18 @@ public class Challenge {
     // -------------- FOUNDATION --------------
 
     /***
-     * A method to find the largest number
+     * A method to find the largest number of two given integers
      * @param num1 a number to be compared with the other parameter
      * @param num2 a number to be compared with the other parameter
      * @return returns the larger of the 2 numbers passed as paramters
      */
     public int findLargestNumber(int num1, int num2) {
+        // Write your solution here
         return -1;
     }
 
     /***
-     * A method to find the longest string
+     * A method to find the longest string of two given strings
      * @param string1 a string to be compared with the other parameter
      * @param string2 a string to be compared with the other parameter
      * @return returns the larger of the 2 strings or "These two are the same length!" if they are of equal length
@@ -28,7 +29,8 @@ public class Challenge {
     }
 
     /**
-     * A method to calculate a price discount
+     * A method to calculate a price discount. Given the price and the amount to be discounted return the new
+     * discounted price.
      * @param price The advertised price of a product
      * @param discount The percentage discount available
      * @return returns the price with the discount applied
@@ -41,19 +43,25 @@ public class Challenge {
     // -------------- INTERMEDIATE --------------
 
     /***
-     * A method to check whether 2 numbers are equal to 4dp
+     * A method to check whether 2 numbers are equal to 4 decimal places.
+     * HINT: What happens if you do 0.1234 * 10000?
      * @param num1 a double to be compared with the other parameter
      * @param num2 a double to be compared with the other parameter
-     * @return a string to specify whether the 2 params match to 3dp
+     * @return a boolean to specify whether the 2 params match to 4 decimal places.
      */
-    public Boolean compareTwoNumbers(double num1, double num2) {
+    public boolean compareTwoNumbers(double num1, double num2) {
         return true;
     }
 
     /***
-     * A method to determine which day of the week it is from a numeric input
+     * A method to determine which day of the week it is from a numeric input.
+     * e.g 0 = "Sunday", 1 = "Monday" etc.
+     * If the input is out of range return "Not a valid day range! The number needs to be from 0-6"
+     * EXTENSION Use a switch?
+     * https://www.w3schools.com/java/java_switch.asp
      * @param day a Integer from 1-7 (that corresponds to the days of the week)
-     * @return the day that corresponds to the number that was passed to the method as a parameter or "Not a valid day range! The number needs to be from 1-7" if param passed is outside of the range
+     * @return the day that corresponds to the number that was passed to the method as a parameter or "Not a valid
+     * day range! The number needs to be from 0-6" if param passed is outside of the range
      */
     public String getDayName(int day) {
         return "";
