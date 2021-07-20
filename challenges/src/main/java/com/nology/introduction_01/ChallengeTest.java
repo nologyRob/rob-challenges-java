@@ -69,13 +69,13 @@ class ChallengeTest {
     @Test
     void compareTwoNumbers_ValidInputsNotEqual_ReturnFalse() {
         Boolean result = challenge.compareTwoNumbers(12.3333, 12.3343);
-        assertEquals(false, result);
+        assertFalse(result);
     }
 
     @Test
     void compareTwoNumbers_ValidInputsEqual_ReturnTrue()  {
         Boolean result = challenge.compareTwoNumbers(1.3333, 1.3333);
-        assertEquals(true, result);
+        assertTrue(result);
     }
 
     // 05 tests for getDayName
@@ -133,19 +133,19 @@ class ChallengeTest {
     @Test
     void isEvenWord_ValidInputEven_ReturnsTrue() {
         boolean result = challenge.isEvenWord("dice");
-        assertEquals(true, result);
+        assertTrue(result);
     }
 
     @Test
     void isEvenWord_ValidInputOdd_ReturnsFalse() {
         boolean result = challenge.isEvenWord("mouse");
-        assertEquals(false, result);
+        assertFalse(result);
     }
 
     @Test
     void isEvenWord_InvalidInputEmpty_ReturnsFalse() {
         boolean result = challenge.isEvenWord("");
-        assertEquals(false, result);
+        assertFalse(result);
     }
 
     // --------------  ADVANCED --------------
@@ -155,25 +155,25 @@ class ChallengeTest {
     @Test
     void leapYearChecker_ValidInput_ReturnsTrueDivisibleBy4() {
         boolean result = challenge.leapYearChecker(2016);
-        assertEquals(true, result);
+        assertTrue(result);
     }
 
     @Test
     void leapYearChecker_InvalidInput_ReturnsFalseNotDivisibleBy4() {
         boolean result = challenge.leapYearChecker(2017);
-        assertEquals(false, result);
+        assertFalse(result);
     }
 
     @Test
     void leapYearChecker_ValidInput_ReturnsTrueDivisibleBy4And400() {
         boolean result = challenge.leapYearChecker(2000);
-        assertEquals(true, result);
+        assertTrue(result);
     }
 
     @Test
     void leapYearChecker_InvalidInput_ReturnsFalseDivisibleBy4And100() {
         boolean result = challenge.leapYearChecker(2100);
-        assertEquals(false, result);
+        assertFalse(result);
     }
 
 }
