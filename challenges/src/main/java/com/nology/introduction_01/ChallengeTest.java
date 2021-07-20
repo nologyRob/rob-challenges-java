@@ -5,11 +5,11 @@ import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ChallengeTest {
-    private Solution challenge;
+    private Challenge challenge;
 
     @BeforeEach
     void setUp() {
-        challenge = new Solution();
+        challenge = new Challenge();
     }
 
     @AfterEach
@@ -147,6 +147,8 @@ class ChallengeTest {
         boolean result = challenge.isEvenWord("");
         assertEquals(false, result);
     }
+
+    // --------------  ADVANCED --------------
 
     // 07 tests for leapYearChecker
 
