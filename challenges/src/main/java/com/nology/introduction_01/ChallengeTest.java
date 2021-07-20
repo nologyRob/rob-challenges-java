@@ -147,4 +147,31 @@ class ChallengeTest {
         boolean result = challenge.isEvenWord("");
         assertEquals(false, result);
     }
+
+    // 07 tests for leapYearChecker
+
+    @Test
+    void leapYearChecker_ValidInput_ReturnsTrueDivisibleBy4() {
+        boolean result = challenge.leapYearChecker(2016);
+        assertEquals(true, result);
+    }
+
+    @Test
+    void leapYearChecker_InvalidInput_ReturnsFalseNotDivisibleBy4() {
+        boolean result = challenge.leapYearChecker(2017);
+        assertEquals(false, result);
+    }
+
+    @Test
+    void leapYearChecker_ValidInput_ReturnsTrueDivisibleBy4And400() {
+        boolean result = challenge.leapYearChecker(2000);
+        assertEquals(true, result);
+    }
+
+    @Test
+    void leapYearChecker_InvalidInput_ReturnsFalseDivisibleBy4And100() {
+        boolean result = challenge.leapYearChecker(2100);
+        assertEquals(false, result);
+    }
+
 }

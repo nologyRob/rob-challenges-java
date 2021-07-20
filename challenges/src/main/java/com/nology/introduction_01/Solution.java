@@ -99,8 +99,10 @@ public class Solution {
 
     /***
      * A method to determine whether any given year is a leap year
-     * @param year the year to be checked
-     * @return returns true if it is a leap year, false if not
+     * A leap year occurs on:
+     * - any year that is evenly divisible by 4
+     * - except any year that is evenly divisible by 100 as well
+     * - unless the same year is also evenly divisible by 400
      */
     public boolean leapYearChecker(int year) {
         boolean x = (year % 4) == 0;
