@@ -85,6 +85,16 @@ public class Solution {
         return dayName;
     }
 
+    /***
+     * A method to check whether a word has an even length or not.
+     * If a empty string is given it should return false.
+     * @param word a String to be checked whether the string has an even length or not.
+     * @return a boolean the result of the length check.
+     */
+    public boolean isEvenWord(String word) {
+        return !word.equals("") && word.length() % 2 == 0;
+    }
+
     // --------------  ADVANCED --------------
 
     /***

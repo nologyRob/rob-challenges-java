@@ -123,8 +123,28 @@ class ChallengeTest {
     }
 
     @Test
-    void findTheDayOfTheWeekGivenInvalidInput() {
+    void getDayName_InvalidInput_ReturnsOutOfRange() {
         String result = challenge.getDayName(9);
         assertEquals("Not a valid day range! The number needs to be from 0-6", result);
+    }
+
+    // 06 tests for isEvenWord
+
+    @Test
+    void isEvenWord_ValidInputEven_ReturnsTrue() {
+        boolean result = challenge.isEvenWord("dice");
+        assertEquals(true, result);
+    }
+
+    @Test
+    void isEvenWord_ValidInputOdd_ReturnsFalse() {
+        boolean result = challenge.isEvenWord("mouse");
+        assertEquals(false, result);
+    }
+
+    @Test
+    void isEvenWord_InvalidInputEmpty_ReturnsFalse() {
+        boolean result = challenge.isEvenWord("");
+        assertEquals(false, result);
     }
 }
