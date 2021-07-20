@@ -103,6 +103,8 @@ public class Solution {
      * - any year that is evenly divisible by 4
      * - except any year that is evenly divisible by 100 as well
      * - unless the same year is also evenly divisible by 400
+     * @param year the year to be checked
+     * @return returns true if it is a leap year, false if not
      */
     public boolean leapYearChecker(int year) {
         boolean x = (year % 4) == 0;
