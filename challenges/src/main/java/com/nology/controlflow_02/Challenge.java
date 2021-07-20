@@ -17,31 +17,70 @@ public class Challenge {
     }
 
     /***
-     * write a method to display the middle character of a string.
-     * @param word the word that we want to check
-     * @return return the middle character... for example, passing in "Sam" would return "The middle character in the string: a"
+     * Write a method that checks if a number is within 0 and a given range. Both inclusive.
+     * @param number
+     * @param rangeLimit
+     * @return returns a boolean based on whether the number is within the range
      */
-   public String getMiddleCharacter(String word) {
-       return "";
-   }
+    public boolean isWithinRange(int number, int rangeLimit) {
+        return false;
+    }
+
 
     /***
-     * We have a dog that likes to bark.  We need to wake up if the dog is barking at night!
-     * @param barking type boolean and be named barking it represents if our dog is currently barking.
-     * @param hourOfDay represents the hour of the day and is of type int with the name hourOfDay and has a valid range of 0-23.
+     * Write a method that takes two numbers and an operator. Based on the operator preform the
+     * equation and return the result.
+     * If either number is below 0 return -1
+     * If an operator is not * / + - return -1
+     * e.g 10, 2 , "/" = 5
+     * e.g 10, 2 , "+" = 12
+     * @param numberOne
+     * @param numberTwo
+     * @param operator
+     * @return returns a string which is the concatenation of the 2 parameters
+     */
+    public int stringCalculator(int numberOne, int numberTwo, String operator) {
+        return -1;
+    }
+
+
+    // -------------- INTERMEDIATE --------------
+
+    /***
+     * We have a dog that likes to bark. We need to wake up if the dog is barking at night!
+     * This method should return true or false if we need to wake up or not.
+     * If the dog is barking before 8 or after 22 hours we need to wake up.
+     * If the hourOfDay is not within 0 - 23 we do not need to wake up.
+     *
+     * @param barking type boolean it represents if our dog is currently barking or not.
+     * @param hourOfDay represents the hour of the day and is of type int with the name hourOfDay and has a valid
+     *                  range of 0-23.
      * @return We have to wake up if the dog is barking before 8 or after 22 hours so in that case return true. In all other cases return false.
      */
     public boolean shouldWakeUp(boolean barking, int hourOfDay) {
         return false;
     }
 
-    // -------------- INTERMEDIATE --------------
+    /***
+     * Write a method to display the middle character or characters of a word.
+     * If multiple words separated with a " " or no words are given it should return "Invalid Input"
+     * @param word the word that we want to check
+     * @return return the middle character or characters... for example, passing in "Sam" would return "The middle
+     * character in the string: a"
+     */
+    public String getMiddleCharacter(String word) {
+        return "";
+    }
+
 
     /***
-     * Given kiloBytes as an argument, print a message in the format "XX KB = YY MB and ZZ KB".
-     *
+     * Write a method called printMegaBytesAndKiloBytes that has 1 parameter of type int.
+     * The method needs to see how many megabytes are in the given kilobyte and work out the remainder
+     * Then it needs to print a message in the format "XX KB = YY MB and ZZ KB".
+     * If the kiloBytes param is less than 0 return "Invalid value"
+     * 1 megaByte = 1024 kiloBytes
      * @param kiloBytes the number of kilobytes to be converted
-     * @return A string in the format above if the input is valid, or "Invalid value" if the kiloBytes param is less than 0
+     * @return returns a string in the format above if the input is valid, or "Invalid value"
      */
     public String printMegaBytesAndKiloBytes(int kiloBytes) {
         return "";
