@@ -54,7 +54,7 @@ class ChallengeTest {
     }
 
     @Test
-    void isWithinRange_InvalidInput_ReturnsFalseBelow0() {
+    void isWithinRange_InvalidInput_ReturnsFalseBelowZero() {
         boolean result = challenge.isWithinRange(-50, 20);
         assertFalse(result);
     }
@@ -62,25 +62,25 @@ class ChallengeTest {
     // 03 tests for stringCalculator challenge
 
     @Test
-    void stringCalculator_ValidInputs_ReturnsAddition() {
+    void stringCalculator_ValidInputs_ReturnsAdditionResult() {
         int result = challenge.stringCalculator(10, 20, "+");
         assertEquals(30, result);
     }
 
     @Test
-    void stringCalculator_ValidInputs_ReturnsMinus() {
+    void stringCalculator_ValidInputs_ReturnsMinusResult() {
         int result = challenge.stringCalculator(500, 20, "-");
         assertEquals(480, result);
     }
 
     @Test
-    void stringCalculator_ValidInputs_ReturnsDivision() {
+    void stringCalculator_ValidInputs_ReturnsDivisionResult() {
         int result = challenge.stringCalculator(500, 2, "/");
         assertEquals(250, result);
     }
 
     @Test
-    void stringCalculator_ValidInputs_ReturnsMultiplication() {
+    void stringCalculator_ValidInputs_ReturnsMultiplicationResult() {
         int result = challenge.stringCalculator(5, 20, "*");
         assertEquals(100, result);
     }
@@ -150,25 +150,25 @@ class ChallengeTest {
     // 05 tests for getMiddleCharacter challenge
 
     @Test
-    void getMiddleCharacter_ValidInputOdd_ReturnSingleCharacter() {
+    void getMiddleCharacter_ValidInput_OddReturnsSingleCharacter() {
         String result = challenge.getMiddleCharacter("Sam");
         assertEquals("a", result);
     }
 
     @Test
-    void getMiddleCharacter_ValidInputEven_ReturnsMultipleCharacters() {
+    void getMiddleCharacter_ValidInput_EvenReturnsMultipleCharacters() {
         String result = challenge.getMiddleCharacter("Andy");
         assertEquals("nd", result);
     }
 
     @Test
-    void getMiddleCharacter_InvalidInputMultipleWords_ReturnsInvalidMessage() {
+    void getMiddleCharacter_InvalidInput_MultipleWordsReturnsInvalidMessage() {
         String result = challenge.getMiddleCharacter("Sam Joyce");
         assertEquals("Invalid Input", result);
     }
 
     @Test
-    void getMiddleCharacter_InvalidInputNoWord_ReturnsInvalidMessage() {
+    void getMiddleCharacter_InvalidInput_NoWordReturnsInvalidMessage() {
         String result = challenge.getMiddleCharacter("");
         assertEquals("Invalid Input", result);
     }
@@ -199,21 +199,32 @@ class ChallengeTest {
         assertEquals("Invalid Value", result);
     }
 
+    // 07 tests for calculateReturn challenge
+
     @Test
-    void calculateInvestmentGrowthOver10Years() {
+    void calculateReturn_ValidInputs_ReturnGrowth10Years() {
         String result = challenge.calculateReturn(1000, 10, 0.1);
-        assertEquals("You now have " + 2853, result);
+        assertEquals("You now have " + 2594, result);
     }
 
     @Test
-    void calculateInvestmentGrowthWithInvalidInvestment() {
+    void calculateReturn_InvalidInputs_InvestmentReturnInvestmentMessage() {
         String result = challenge.calculateReturn(-1000, 10, 0.1);
-        assertEquals("initialInvestment & years must be above 0.", result);
+        assertEquals("Invalid investment", result);
     }
 
     @Test
-    void calculateInvestmentGrowthWithInvalidYears() {
+    void calculateReturn_InvalidInputs_YearsReturnYearsMessage() {
         String result = challenge.calculateReturn(1000, -10, 0.1);
-        assertEquals("initialInvestment & years must be above 0.", result);
+        assertEquals("Invalid years", result);
+    }
+
+    @Test
+    void calculateReturn_InvalidInputs_InterestReturnInterestMessage() {
+        String interestToHigh = challenge.calculateReturn(1000, 10, 1);
+        assertEquals("Invalid rate of interest", interestToHigh);
+
+        String interestToLow = challenge.calculateReturn(1000, 10, -0.5);
+        assertEquals("Invalid rate of interest", interestToLow);
     }
 }
