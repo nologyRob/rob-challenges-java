@@ -2,6 +2,7 @@ package com.nology.classes_03;
 
 
 
+import jdk.jfr.Category;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -9,37 +10,90 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class EmployeeTest {
 
-    public Employee employee;
+    public EmployeeSolution manager;
+    public EmployeeSolution salesRep;
+    public EmployeeSolution intern;
+
 
     @BeforeEach
     void setUp() {
-        int[] deals = {22000, 13000, 21000, 7500, 9000, 17000, 18000};
-        this.employee = new Employee("Adam", "Manager", 9, deals);
+        this.manager = new EmployeeSolution("Karen", "Manager", 10, 10, 400);
+        this.salesRep = new EmployeeSolution("Judy", "Sales Rep", 9, 2, 30);
+        this.intern = new EmployeeSolution("Jilly", "Intern", 7, 1, 2);
     }
+
+    // Testing the Fields and the Constructor
+
+    @Test
+    void Employee_ValidFields_nameMatches() {
+        assertEquals("Karen", manager.name);
+    }
+
+    @Test
+    void Employee_ValidFields_positionMatches() {
+        assertEquals("Manager", manager.position);
+    }
+
+    @Test
+    void Employee_ValidFields_ratingMatches() {
+        assertEquals(10, manager.rating);
+    }
+
+    @Test
+    void Employee_ValidFields_yearsEmployedMatches() {
+        assertEquals(10, manager.yearsEmployed);
+    }
+
+    @Test
+    void Employee_ValidFields_completedDealsMatches() {
+        assertEquals(400, manager.completedDeals);
+    }
+
+    // Testing isPromotable
 
     @Test
     void isPromotable_ValidPromotion_ReturnsTrue() {
-        boolean result = this.employee.isPromotable();
-        assertTrue(result);
+        boolean managerResult = this.manager.isPromotable();
+        assertTrue(managerResult);
 
-        int[] deals = {1500, 2000};
-        Employee employee2 = new Employee("John", "Doe", 5, deals);
-        assertFalse(employee2.isPromotable());
+        boolean salesRepResult = this.salesRep.isPromotable();
+        assertTrue(salesRepResult);
     }
 
     @Test
-    void calculateCompletedDealsSum_ValidDeals_ReturnsSumOfDeals() {
-        int result = this.employee.calculateCompletedDealsSum();
-        assertEquals(107500, result);
+    void isPromotable_InValidPromotion_ReturnsFalse() {
+        boolean internResult = this.intern.isPromotable();
+        assertFalse(internResult);
+    }
+
+    // Testing calculateDealsPerYear
+
+    @Test
+    void calculateDealsPerYear_ValidFields_ReturnsSumOfDeals() {
+        int managerResult = this.manager.calculateDealsPerYear();
+        assertEquals(40, managerResult);
+
+        int salesRepResult = this.salesRep.calculateDealsPerYear();
+        assertEquals(15, salesRepResult);
+
+        int internResult = this.intern.calculateDealsPerYear();
+        assertEquals(2 ,internResult);
+    }
+
+    // Testing hasBonusQualification
+
+    @Test
+    void hasBonusQualification_ValidBonus_ReturnsTrue() {
+        boolean managerResult = this.manager.hasBonusQualification();
+        assertTrue(managerResult);
     }
 
     @Test
-    void hasBonusQualification_ValidBonus_ReturnsCorrectMessage() {
-        Boolean result = this.employee.hasBonusQualification();
-        assertTrue(result);
+    void hasBonusQualification_InvalidBonus_ReturnsFalse() {
+        boolean salesRepResult = this.salesRep.hasBonusQualification();
+        assertFalse(salesRepResult);
 
-        int[] deals = {1500, 2000};
-        Employee employee2 = new Employee("John", "Doe", 9, deals);
-        assertFalse(employee2.hasBonusQualification());
+        boolean internResult = this.intern.hasBonusQualification();
+        assertFalse(internResult);
     }
 }
