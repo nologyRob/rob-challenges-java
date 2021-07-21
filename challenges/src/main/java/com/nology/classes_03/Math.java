@@ -1,5 +1,7 @@
 package com.nology.classes_03;
 
+
+
 public class Math {
 
     // --------------- Foundation ---------------
