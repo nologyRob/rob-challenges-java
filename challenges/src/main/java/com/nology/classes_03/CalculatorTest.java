@@ -12,7 +12,7 @@ class CalculatorTest {
 
     private Calculator calculator;
 
-    // Uncomment the BeforeEach below when you have completed the constructor
+    // Uncomment the BeforeEach when you have completed the constructor
 
 //    @BeforeEach
 //    void setUp() {
