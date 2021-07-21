@@ -10,16 +10,16 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class EmployeeTest {
 
-    public EmployeeSolution manager;
-    public EmployeeSolution salesRep;
-    public EmployeeSolution intern;
+    public Employee manager;
+    public Employee salesRep;
+    public Employee intern;
 
 
     @BeforeEach
     void setUp() {
-        this.manager = new EmployeeSolution("Karen", "Manager", 10, 10, 400);
-        this.salesRep = new EmployeeSolution("Judy", "Sales Rep", 9, 2, 30);
-        this.intern = new EmployeeSolution("Jilly", "Intern", 7, 1, 2);
+        this.manager = new Employee("Karen", "Manager", 10, 10, 400);
+        this.salesRep = new Employee("Judy", "Sales Rep", 9, 2, 30);
+        this.intern = new Employee("Jilly", "Intern", 7, 1, 2);
     }
 
     // Testing the Fields and the Constructor
