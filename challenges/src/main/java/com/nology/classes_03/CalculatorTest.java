@@ -38,7 +38,6 @@ class CalculatorTest {
 //        double secondInput = calculator.getSecondInput();
 //        assertEquals(20, secondInput);
 //    }
-//
 
     // Testing setters and getters
     // Uncomment the tests when you have completed the setters
