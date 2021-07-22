@@ -1,7 +1,7 @@
 package com.nology.arraysloops_04;
 
 /**
- *   All challenges in this repository are seperated into three levels: Foundation, Intermediate, and Advanced.
+ *   All challenges in this repository are separated into three levels: Foundation, Intermediate, and Advanced.
  *   The expectation is to complete all Foundation level challenges, with Intermediate and upwards pushing your knowledge
  *   and may require you to google things in order to solve them. If you find an answer online somewhere, be kind and
  *   share it with the group!
@@ -13,7 +13,9 @@ public class Challenge {
     // -------------- FOUNDATION --------------
 
     /***
-     * Get the first and last items in an array
+     * Get the first and last items in an given string array
+     * If a the given array's length is 0 return an empty string array []
+     *
      * @param namesArr e.g. ["Ollie", "Sam", "Bex"]
      * @return a new array containing the first and last items in the given array e.g. ["Ollie", "Bex"]
      */

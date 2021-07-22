@@ -3,6 +3,12 @@ package com.nology.arraysloops_04;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *   All challenges in this repository are separated into three levels: Foundation, Intermediate, and Advanced.
+ *   The expectation is to complete all Foundation level challenges, with Intermediate and upwards pushing your knowledge
+ *   and may require you to google things in order to solve them. If you find an answer online somewhere, be kind and
+ *   share it with the group!
+ */
 public class Solution {
 
     // -------------- FOUNDATION --------------
@@ -36,7 +42,13 @@ public class Solution {
      * @return Amount of odd numbers e.g. 3
      */
     public int getAmountOfOddNumbers(int[] numbersArr) {
-        return -1;
+        int total = 0;
+        for (int i = 0; i< numbersArr.length; i++) {
+            if(numbersArr[i] % 2 != 0){
+                total++;
+            }
+        }
+        return total;
     }
 
     // -------------- INTERMEDIATE --------------
