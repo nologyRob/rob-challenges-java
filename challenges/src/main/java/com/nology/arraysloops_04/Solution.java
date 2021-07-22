@@ -120,7 +120,7 @@ public class Solution {
     // -------------- ADVANCED --------------
 
     /***
-     * Given an array of numbers, sort these numbers by comparing adjacent numbers. K
+     * Given an array of numbers, sort these numbers numerically lowest to highest by comparing adjacent numbers.
      *
      * NOTE: Your code should work by repeatedly swapping the adjacent elements if they are in wrong order.
      * Example:
@@ -130,8 +130,11 @@ public class Solution {
      * ( 1 4 5 2 8 ) –>  ( 1 4 2 5 8 ), Swap since 5 > 2
      * ( 1 4 2 5 8 ) –> ( 1 4 2 5 8 ), Now, since these elements are already in order (8 > 5), algorithm does not swap them
      *
+     * HINT: Can you use a nested for loop?
+     * https://www.programiz.com/java-programming/nested-loop
+     *
      * @param numbersArr - array of numbers e.g. [5, 1, 4, 2, 8]
-     * @return The sorted array of numbers
+     * @return The sorted array of numbers e.g. [1, 2, 4, 5, 8]
      */
     public int[] sort(int[] numbersArr) {
         int arrayLength = numbersArr.length;

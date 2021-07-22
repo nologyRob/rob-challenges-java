@@ -4,8 +4,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ChallengeTest {
@@ -128,6 +126,10 @@ public class ChallengeTest {
         assertTrue(result);
     }
 
+    // -------------- ADVANCED --------------
+
+    // Testing sort
+
     @Test
     void sort_UnsortedNumbers_ReturnSortedArray() {
         int[] result = challenge.sort(new int[]{5, 1, 4, 2, 8});
@@ -135,5 +137,20 @@ public class ChallengeTest {
 
         int[] result2 = challenge.sort(new int[]{10, 9, 8});
         assertArrayEquals(new int[]{8, 9, 10}, result2);
+    }
+
+    @Test
+    void sort_SortedNumbers_ReturnSortedArray() {
+        int[] result = challenge.sort(new int[]{1, 2, 4, 5, 8});
+        assertArrayEquals(new int[]{1, 2, 4, 5, 8}, result);
+
+        int[] result2 = challenge.sort(new int[]{8, 9, 10});
+        assertArrayEquals(new int[]{8, 9, 10}, result2);
+    }
+
+    @Test
+    void sort_InvalidInput_ReturnSortedArray() {
+        int[] result = challenge.sort(new int[0]);
+        assertArrayEquals(new int[0], result);
     }
 }
