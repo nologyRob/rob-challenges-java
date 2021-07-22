@@ -15,6 +15,7 @@ public class Solution {
 
     /***
      * Get the first and last items in an array
+     *
      * @param namesArr e.g. ["Ollie", "Sam", "Bex"]
      * @return a new array containing the first and last items in the given array e.g. ["Ollie", "Bex"]
      */
@@ -25,6 +26,7 @@ public class Solution {
 
     /***
      * Find the SUM/Total of an array of peoples ages
+     *
      * @param agesArr e.g. [18, 25, 21, 40]
      * @return an amount e.g. 104
      */
@@ -38,6 +40,7 @@ public class Solution {
 
     /***
      * Find the amount of odd numbers from a given array of numbers
+     *
      * @param numbersArr e.g. [5, 3, 8, 10, 1]
      * @return Amount of odd numbers e.g. 3
      */
@@ -54,10 +57,14 @@ public class Solution {
     // -------------- INTERMEDIATE --------------
 
     /***
-     * Find all numbers between a min and a max value
+     * Find all numbers between a min and a max value and return them in an array.
+     * The min at the start and the max at the end of the returned array.
+     *
+     * If the min is greater than the max return a empty integer array.
+     *
      * @param min - The starting range value e.g. 3
      * @param max - The ending/finishing range value e.g. 6
-     * @return a new array of all numbers between two numbers e.g. [3, 4, 5, 6]
+     * @return a new array of all numbers between and including the min and max number. e.g. [3, 4, 5, 6]
      */
     public int[] getRange(int min, int max) {
         if (min > max) return new int[] {};
@@ -74,6 +81,7 @@ public class Solution {
 
     /**
      * Swap the first and last names in a string
+     *
      * @param fullName e.g. "Andy Evans"
      * @return a string with the last name, followed by the first name e.g. "Evans Andy"
      */
@@ -87,7 +95,11 @@ public class Solution {
     }
 
     /***
-     * Determine whether a score is the highest score
+     * Determine whether a given score is the highest score out of a array of scores.
+     *
+     * Can you use a for-each loop?
+     * https://www.w3schools.com/java/java_for_loop.asp
+     *
      * @param scoresArr e.g. [3, 10, 2, 8]
      * @param newScore e.g. 11
      * @return true or false depending on whether the newScore is the highest value in the array

@@ -6,8 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class ChallengeTest {
     private Solution challenge;
@@ -97,6 +96,8 @@ public class ChallengeTest {
         assertArrayEquals(expectedResult, result);
     }
 
+    // Testing swapNames
+
     @Test
     void swapNames_ValidName_ReturnsSwappedNames() {
         String result = challenge.swapNames("Andy Evans");
@@ -111,12 +112,20 @@ public class ChallengeTest {
         assertEquals("Andy", "Andy");
     }
 
+    // Testing isHighestScore
+
     @Test
     void isHighestScore_ValidHighScore_ReturnsCorrectValue() {
         boolean result = challenge.isHighestScore(new int[]{3, 10, 2, 8}, 12);
-        assertEquals(true, result);
+        assertTrue(result);
         boolean result2 = challenge.isHighestScore(new int[]{3, 10, 2, 8}, 2);
-        assertEquals(false, result2);
+        assertFalse(result2);
+    }
+
+    @Test
+    void isHighestScore_EmptyScores_ReturnsTrue() {
+        boolean result = challenge.isHighestScore(new int[0], 12);
+        assertTrue(result);
     }
 
     @Test
