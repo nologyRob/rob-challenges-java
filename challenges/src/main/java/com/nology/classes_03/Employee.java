@@ -1,32 +1,70 @@
 package com.nology.classes_03;
 
+/**
+ * -------------- Foundation -----------------
+ *
+ * The Employee class represents a generic employee.
+ *
+ * This is a skeleton of a class you will have to complete it by following these steps.
+ * - Adding data fields / properties
+ * - Adding a constructor
+ * - Implementing three methods
+ *
+ * Each step is documented through the class.
+ *
+ */
+
 public class Employee {
 
-    // -------------- Foundation -----------------
+    /**
+     * Create 4 public fields:
+     * - name is a string
+     * - position is a string
+     * - rating is a integer
+     * - yearsEmployed is a integer
+     * - completedDeals is a integer
+     */
 
-    // Create a class of an Employee that has four properties ....
-    // name: string
-    // position: string
-    // rating: int
-    // completedDeals: array
-
-    // With three methods ....
-    // isPromotable(): checks if rating is over 7, if so return true... else false
-    // calculateCompletedDealsSum(): loops through completedDeals array and totals all the deals completed.. returns an int which is the total
-    // hasBonusQualification: checks if rating is 9 or greater and if the dealsDone total is over £100,000
-
-    public Employee(String name, String position, int rating, int[] completedDeals) {
-
+    /**
+     * Complete the constructor below to initialize the class and the data to the fields above.
+     */
+    public Employee(String name, String position, int rating, int yearsEmployed, int completedDeals) {
+        // complete the constructor in here
     }
 
+    /**
+     * Complete the isPromotable method
+     *
+     * It needs to check if the employee rating is over 7, if so return true... else false
+     *
+     * @return boolean if employee is promotable
+     */
     public boolean isPromotable() {
         return false;
     }
 
-    public int calculateCompletedDealsSum() {
+    /**
+     * Complete the calculateDealsPerYear method
+     *
+     * It needs to calculate the average number of deals completed  each year since they have joined the company.
+     *
+     * @return int average deals per year
+     */
+    public int calculateDealsPerYear() {
         return -1;
     }
 
+    /**
+     * Complete the hasBonusQualification method
+     *
+     * It needs to check if the employee is able to get a bonus.
+     *
+     * To get a bonus:
+     * - They need a rating above 8.
+     * - They need a deals per year average greater than or equal to 20.
+     *
+     * @return boolean if they are eligible for a bonus
+     */
     public boolean hasBonusQualification() {
         return false;
     }
