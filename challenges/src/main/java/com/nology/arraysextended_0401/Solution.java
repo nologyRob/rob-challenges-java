@@ -4,10 +4,10 @@ public class Solution {
     // -------------- FOUNDATION --------------
 
     /**
-     * Calculate how many crosses are in the game
+     * Calculate how many crosses are in the given game
      *
      * @param game - Two Dimensional arrays contains -1 (No Move), 0 (Naught), 1 (Cross)
-     * @return count of crosses
+     * @return count of all the Crosses (1's) in the given game
      */
     public int calculateCrosses(int[][] game) {
         int count = 0;
@@ -21,10 +21,10 @@ public class Solution {
     }
 
     /**
-     * Calculate how many moves are in the game
+     * Calculate how many noughts and crosses are in the given game
      *
      * @param game - Two Dimensional arrays contains -1 (No Move), 0 (Naught), 1 (Cross)
-     * @return count of crosses
+     * @return count of the noughts (0's) and crosses (1's) in the given game
      */
     public int calculateMoves(int[][] game) {
         int count = 0;
@@ -38,18 +38,17 @@ public class Solution {
     }
 
     /**
-     * Calculate percentage of used squares
+     * Calculate percentage of used squares in the given game.
      *
      * @param game - Two Dimensional arrays contains -1 (No Move), 0 (Naught), 1 (Cross)
-     * @return count of crosses
+     * @return float the percentage of used squares
      */
     public float calculateMovesPercentage(int[][] game) {
-        float amountOfMoves = 0;
+        float amountOfMoves = calculateMoves(game);
         float amountOfSquares = 0;
 
         for (int i = 0; i < game.length; i++) {
             for (int j = 0; j < game[i].length; j++) {
-                if (game[i][j] > -1) amountOfMoves++;
                 amountOfSquares++;
             }
         }

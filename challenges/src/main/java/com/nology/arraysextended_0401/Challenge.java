@@ -1,42 +1,59 @@
 package com.nology.arraysextended_0401;
 
 /**
- *   All challenges in this repository are seperated into three levels: Foundation, Intermediate, and Advanced.
+ *   All challenges in this repository are separated into three levels: Foundation, Intermediate, and Advanced.
  *   The expectation is to complete all Foundation level challenges, with Intermediate and upwards pushing your knowledge
  *   and may require you to google things in order to solve them. If you find an answer online somewhere, be kind and
  *   share it with the group!
  */
 public class Challenge {
 
+    /**
+     *  All of the challenges in the this folder are focused on working with a multidimensional array / nested array.
+     *  To mimic the grid of a noughts and crosses game we are using this data structure.
+     *
+     * KEY
+     * - -1 (No Move)
+     * - 0 (Naught)
+     * - 1 (Cross)
+     *
+     * EXAMPLE
+     *  int[][] game = {{1, 1, 0},
+     *                  {1, 0, 1},
+     *                  {-1, 0, -1}}
+     *
+     * You may have to use a nested for loop to loop through the nested array.
+     * https://www.programiz.com/java-programming/nested-loop
+     */
     public Challenge() {}
 
     // -------------- FOUNDATION --------------
 
     /**
-     * Calculate how many crosses are in the game
+     * Calculate how many crosses are in the given game
      *
      * @param game - Two Dimensional arrays contains -1 (No Move), 0 (Naught), 1 (Cross)
-     * @return count of crosses
+     * @return count of all the Crosses (1's) in the given game
      */
     public int calculateCrosses(int[][] game) {
         return -1;
     }
 
     /**
-     * Calculate how many moves are in the game
+     * Calculate how many moves (noughts and crosses) are in the given game.
      *
      * @param game - Two Dimensional arrays contains -1 (No Move), 0 (Naught), 1 (Cross)
-     * @return count of crosses
+     * @return count of the noughts (0's) and crosses (1's) in the given game
      */
     public int calculateMoves(int[][] game) {
         return -1;
     }
 
     /**
-     * Calculate percentage of used squares
+     * Calculate percentage of used squares in the given game.
      *
      * @param game - Two Dimensional arrays contains -1 (No Move), 0 (Naught), 1 (Cross)
-     * @return count of crosses
+     * @return float the percentage of used squares
      */
     public float calculateMovesPercentage(int[][] game) {
         return -1;
