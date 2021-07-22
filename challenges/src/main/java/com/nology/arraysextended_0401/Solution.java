@@ -59,11 +59,13 @@ public class Solution {
 
 
     /**
-     * Checks if the given player has won "horizontally" - Don't check for vertical or diagonal wins just yet
+     * Checks if the given player has won "horizontally" in the given game
+     *
+     * Don't check for vertical or diagonal wins just yet
      *
      * @param game - Two Dimensional arrays contains -1 (No Move), 0 (Naught), 1 (Cross)
      * @param player - 0 (Naught) or 1 (cross)
-     * @return If the player has won or not
+     * @return If the given player has won or not
      */
     public boolean hasPlayerWonHorizontal(int[][] game, int player) {
         boolean hasRowGotWinner = true;
@@ -81,7 +83,9 @@ public class Solution {
     }
 
     /**
-     * Checks if the given player has won "vertically" - Don't check for vertical or diagonal wins just yet
+     * Checks if the given player has won "vertically" in the given game.
+     *
+     * Don't check for diagonal wins just yet
      *
      * @param game - Two Dimensional arrays contains -1 (No Move), 0 (Naught), 1 (Cross)
      * @param player - 0 (Naught) or 1 (cross)
@@ -102,6 +106,47 @@ public class Solution {
             if (hasColumnGotWinner) break;
         }
         return hasColumnGotWinner;
+    }
+
+    /**
+     * Checks if the given player has won "diagonally" in the given game.
+     *
+     * @param game - Two Dimensional arrays contains -1 (No Move), 0 (Naught), 1 (Cross)
+     * @param player - 0 (Naught) or 1 (cross)
+     * @return If the player has won or not
+     */
+    public boolean hasPlayerWonDiagonally(int[][] game, int player) {
+        int[][] leftDiagonalCoOrds = {{0,0}, {1,1}, {2, 2}};
+        int[][] rightDiagonalCoOrds = {{0,2}, {1,1}, {2, 0}};
+        boolean hasDiagonalGotWinner = true;
+
+        for (int[] coOrds : leftDiagonalCoOrds) {
+            int x = coOrds[0];
+            int y = coOrds[1];
+
+            if (game[x][y] != player) {
+                hasDiagonalGotWinner = false;
+                break;
+            }
+        }
+
+        if(hasDiagonalGotWinner) {
+            return true;
+        }
+
+        hasDiagonalGotWinner = true;
+
+        for (int[] coOrds : rightDiagonalCoOrds) {
+            int x = coOrds[0];
+            int y = coOrds[1];
+
+            if (game[x][y] != player) {
+                hasDiagonalGotWinner = false;
+                break;
+            }
+        }
+
+        return hasDiagonalGotWinner;
     }
 
     // -------------- ADVANCED --------------

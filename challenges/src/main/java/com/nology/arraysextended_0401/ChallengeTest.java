@@ -95,10 +95,12 @@ public class ChallengeTest {
         assertEquals(100, Math.round(result));
     }
 
-    
+    // -------------- INTERMEDIATE --------------
+
+    // Testing hasPlayerWonHorizontal
 
     @Test
-    void hasPlayerWonHorizontal_ValidWin_ReturnsTrue() {
+    void hasPlayerWonHorizontal_ValidWinNought_ReturnsTrue() {
         int[][] game = {{0, 1, 0},
                 {0, 0, 0},
                 {1, 1, 1}};
@@ -108,7 +110,17 @@ public class ChallengeTest {
     }
 
     @Test
-    void hasPlayerWonHorizontal_InvalidWin_ReturnsFalse() {
+    void hasPlayerWonHorizontal_ValidWinCross_ReturnsTrue() {
+        int[][] game = {{0, 1, 0},
+                {0, 1, 0},
+                {1, 1, 1}};
+
+        boolean result = challenge.hasPlayerWonHorizontal(game, 1);
+        assertTrue(result);
+    }
+
+    @Test
+    void hasPlayerWonHorizontal_InvalidWinNoughts_ReturnsFalse() {
         int[][] game = {{0, 0, 1},
                 {0, 1, 0},
                 {0, 1, 0}};
@@ -118,7 +130,29 @@ public class ChallengeTest {
     }
 
     @Test
-    void hasPlayerWonVertical_ValidWin_ReturnsTrue() {
+    void hasPlayerWonHorizontal_InvalidWinCrosses_ReturnsFalse() {
+        int[][] game = {{0, 0, 1},
+                {0, 1, 0},
+                {0, 1, 0}};
+
+        boolean result = challenge.hasPlayerWonHorizontal(game, 1);
+        assertFalse(result);
+    }
+
+    // Testing hasPlayerWonVertical
+
+    @Test
+    void hasPlayerWonVertical_ValidWinNoughts_ReturnsTrue() {
+        int[][] game = {{0, 1, 0},
+                {0, 0, 1},
+                {0, 1, 0}};
+
+        boolean result = challenge.hasPlayerWonVertical(game, 0);
+        assertTrue(result);
+    }
+
+    @Test
+    void hasPlayerWonVertical_ValidWinCrosses_ReturnsTrue() {
         int[][] game = {{0, 1, 0},
                 {1, 1, 0},
                 {0, 1, 0}};
@@ -128,7 +162,7 @@ public class ChallengeTest {
     }
 
     @Test
-    void hasPlayerWonVertical_InvalidWin_ReturnsFalse() {
+    void hasPlayerWonVertical_InvalidWinCrosses_ReturnsFalse() {
         int[][] game = {{0, 0, 1},
                 {0, 1, 0},
                 {1, 1, 0}};
@@ -136,4 +170,71 @@ public class ChallengeTest {
         boolean result = challenge.hasPlayerWonVertical(game, 1);
         assertFalse(result);
     }
+
+    @Test
+    void hasPlayerWonVertical_InvalidWinNoughts_ReturnsFalse() {
+        int[][] game = {{0, 0, 1},
+                {0, 1, 0},
+                {1, 1, 0}};
+
+        boolean result = challenge.hasPlayerWonVertical(game, 0);
+        assertFalse(result);
+    }
+
+    // Testing hasPlayerWonDiagonally
+
+    @Test
+    void hasPlayerWonDiagonally_ValidWinNoughts_ReturnsTrue() {
+        int[][] leftDiagonalWin = {{0, 1, 0},
+                {0, 0, 1},
+                {1, 1, 0}};
+
+        boolean resultOne = challenge.hasPlayerWonDiagonally(leftDiagonalWin, 0);
+        assertTrue(resultOne);
+
+        int[][] rightDiagonalWin = {{0, 1, 0},
+                {0, 0, 1},
+                {0, 1, 1}};
+
+        boolean resultTwo = challenge.hasPlayerWonDiagonally(rightDiagonalWin, 0);
+        assertTrue(resultTwo);
+    }
+
+    @Test
+    void hasPlayerWonDiagonally_ValidWinCrosses_ReturnsTrue() {
+        int[][] leftDiagonalWin = {{1, 1, 0},
+                {0, 1, 1},
+                {0, 0, 1}};
+
+        boolean resultOne = challenge.hasPlayerWonDiagonally(leftDiagonalWin, 1);
+        assertTrue(resultOne);
+
+        int[][] rightDiagonalWin = {{1, 1, 0},
+                {0, 1, 0},
+                {0, 1, 1}};
+
+        boolean resultTwo = challenge.hasPlayerWonDiagonally(rightDiagonalWin, 1);
+        assertTrue(resultTwo);
+    }
+
+    @Test
+    void hasPlayerWonDiagonally_InvalidWinCrosses_ReturnsFalse() {
+        int[][] game = {{1, 1, 0},
+                {0, 0, 1},
+                {1, 0, 1}};
+
+        boolean result = challenge.hasPlayerWonDiagonally(game, 1);
+        assertFalse(result);
+    }
+
+    @Test
+    void hasPlayerWonDiagonally_InvalidWinNoughts_ReturnsFalse() {
+        int[][] game = {{0, 1, 0},
+                {1, 0, 1},
+                {1, 0, 1}};
+
+        boolean result = challenge.hasPlayerWonDiagonally(game, 0);
+        assertFalse(result);
+    }
+
 }
