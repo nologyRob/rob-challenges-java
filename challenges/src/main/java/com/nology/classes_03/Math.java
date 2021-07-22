@@ -4,6 +4,9 @@ package com.nology.classes_03;
  * -------------- Advanced -----------------
  *
  * The Math class is a chance for you to implement your own version of the inbuilt Math class.
+ * With additional methods.
+ *
+ * DO NOT USE THE INBUILT MATH CLASS
  *
  * This is a skeleton of a class you will have to complete it by following these steps.
  * - Adding data fields / properties
@@ -11,8 +14,8 @@ package com.nology.classes_03;
  * - Implementing three methods
  *
  * Each step is documented through the class.
- *
  */
+
 
 public class Math {
     /**
@@ -29,14 +32,21 @@ public class Math {
      *
      * Each getter gets the corresponding private field.
      * Each setter sets the corresponding private field.
-     * - It will need parameters to accept a value to then set to the field.
      *
+     * setPI should make sure the incoming number is between 3.1 and 3.2
+     * If it isn't it should not update the PI field
      */
 
     /**
      * Complete the min method
      *
+     * This should:
+     * - be a public method
+     * - return a double
+     * - be called min
+     *
      * It returns the smallest of two given numbers
+     *
      *
      * @param num1 The first number to check
      * @param num2 The second number to check
@@ -45,6 +55,11 @@ public class Math {
 
     /**
      * Complete the max method
+     *
+     * This should:
+     * - be a public method
+     * - return a double
+     * - be called max
      *
      * It returns the largest of two given numbers
      *
@@ -56,6 +71,11 @@ public class Math {
     /**
      * Complete the calculateCircleArea method
      *
+     * This should:
+     * - be a public method
+     * - return a double
+     * - be called calculateCircleArea
+     *
      * It takes a given radius and uses the PI field to calculate the are of the circle
      *
      * If the radius is less than or equal to 0 it shoudl return -1
@@ -66,6 +86,11 @@ public class Math {
 
     /**
      * Complete the pow method
+     *
+     * This should:
+     * - be a public method
+     * - return a double
+     * - be called pow
      *
      * It raises the first number to the power of the second number and returns the result.
      * The first number is multiplied by itself for the second number of times.

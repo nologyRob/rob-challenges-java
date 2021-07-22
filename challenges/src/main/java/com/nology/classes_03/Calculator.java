@@ -69,7 +69,7 @@ public class Calculator {
      * - return a double
      * - be called calculateDivision
      *
-     * The method should divide the first input by the second return the result
+     * The method should divide the first input by the second and return the result
      *
      * If hasBattery is false it should return -1
      * If the second input is 0 it should return 0

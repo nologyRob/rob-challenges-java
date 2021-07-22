@@ -49,7 +49,13 @@ public class MathSolution {
     /**
      * Complete the min method
      *
+     * This should:
+     * - be a public method
+     * - return a double
+     * - be called min
+     *
      * It returns the smallest of two given numbers
+     *
      *
      * @param num1 The first number to check
      * @param num2 The second number to check
@@ -65,6 +71,11 @@ public class MathSolution {
 
     /**
      * Complete the max method
+     *
+     * This should:
+     * - be a public method
+     * - return a double
+     * - be called max
      *
      * It returns the largest of two given numbers
      *
@@ -83,6 +94,11 @@ public class MathSolution {
     /**
      * Complete the calculateCircleArea method
      *
+     * This should:
+     * - be a public method
+     * - return a double
+     * - be called calculateCircleArea
+     *
      * It takes a given radius and uses the PI field to calculate the are of the circle
      *
      * If the radius is less than or equal to 0 it shoudl return -1
@@ -99,6 +115,11 @@ public class MathSolution {
 
     /**
      * Complete the pow method
+     *
+     * This should:
+     * - be a public method
+     * - return a double
+     * - be called pow
      *
      * It raises the first number to the power of the second number and returns the result.
      * The first number is multiplied by itself for the second number of times.
