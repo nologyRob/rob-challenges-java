@@ -19,7 +19,7 @@ class ChallengeTest {
     }
     // -------------- FOUNDATION --------------
 
-    // 01 tests for getFullName challenge
+    // Testing getFullName
 
     @Test
     void getFullName_ValidInput_ReturnsFullNameWithSpace() {
@@ -27,7 +27,7 @@ class ChallengeTest {
         assertEquals("Sam Joyce", result);
     }
 
-    // 02 tests for isWithinRange challenge
+    // Testing isWithinRange
 
     @Test
     void isWithinRange_ValidInput_ReturnsTrueWithinRange() {
@@ -59,7 +59,7 @@ class ChallengeTest {
         assertFalse(result);
     }
 
-    // 03 tests for stringCalculator challenge
+    // Testing stringCalculator
 
     @Test
     void stringCalculator_ValidInputs_ReturnsAdditionResult() {
@@ -97,7 +97,7 @@ class ChallengeTest {
 
     // -------------- INTERMEDIATE --------------
 
-    // 04 tests for shouldWakeUp challenge
+    // Testing shouldWakeUp
 
     @Test
     void shouldWakeUp_ValidInput_ReturnsTrueAfterTenBarking() {
@@ -147,7 +147,7 @@ class ChallengeTest {
         assertFalse(result);
     }
 
-    // 05 tests for getMiddleCharacter challenge
+    // Testing getMiddleCharacter
 
     @Test
     void getMiddleCharacter_ValidInput_OddReturnsSingleCharacter() {
@@ -173,7 +173,7 @@ class ChallengeTest {
         assertEquals("Invalid Input", result);
     }
 
-    // 06 tests for printMegaBytesAndKiloBytes challenge
+    // Testing printMegaBytesAndKiloBytes
 
     @Test
     void printMegaBytesAndKiloBytes_ValidInputs_Returns2MBand172KB() {
@@ -199,7 +199,7 @@ class ChallengeTest {
         assertEquals("Invalid Value", result);
     }
 
-    // 07 tests for calculateReturn challenge
+    // Testing calculateReturn
 
     @Test
     void calculateReturn_ValidInputs_ReturnGrowth10Years() {

@@ -1,5 +1,11 @@
 package com.nology.controlflow_02;
 
+/**
+ *   All challenges in this repository are separated into three levels: Foundation, Intermediate, and Advanced.
+ *   The expectation is to complete all Foundation level challenges, with Intermediate and upwards pushing your knowledge
+ *   and may require you to google things in order to solve them. If you find an answer online somewhere, be kind and
+ *   share it with the group!
+ */
 public class Challenge {
     public Challenge() {
     }
@@ -9,8 +15,8 @@ public class Challenge {
     /***
      * Write a method that concatenates two strings together with a space in between them.
      *
-     * @param firstName
-     * @param lastName
+     * @param firstName the firstname of a person
+     * @param lastName the lastname of a person
      * @return returns a string which is the concatenation of the 2 parameters
      */
     public String getFullName(String firstName, String lastName) {
@@ -20,9 +26,9 @@ public class Challenge {
     /***
      * Write a method that checks if a number is within 0 and a given range. Both inclusive.
      *
-     * @param number
-     * @param rangeLimit
-     * @return returns a boolean based on whether the number is within the range
+     * @param number the number to find within the range
+     * @param rangeLimit the limit of the range
+     * @return returns a boolean based on whether the number is between 0 and the range limit
      */
     public boolean isWithinRange(int number, int rangeLimit) {
         return false;
@@ -32,16 +38,16 @@ public class Challenge {
     /***
      * Write a method that takes two numbers and an operator. Based on the operator preform the
      * equation and return the result.
-     *
-     * If either number is below 0 return -1
-     * If an operator is not * / + - return -1
      * e.g 10, 2 , "/" = 5
      * e.g 10, 2 , "+" = 12
      *
-     * @param numberOne
-     * @param numberTwo
-     * @param operator
-     * @return returns a string which is the concatenation of the 2 parameters
+     * If either number is below 0 return -1
+     * If an operator is not "*", "/", "+", "-" return -1
+     *
+     * @param numberOne the first number in the equation
+     * @param numberTwo the second number in the equation
+     * @param operator the operator to complete the equation
+     * @return returns the result of the equation
      */
     public int stringCalculator(int numberOne, int numberTwo, String operator) {
         return -1;
@@ -55,12 +61,13 @@ public class Challenge {
      * This method should return true or false if we need to wake up or not.
      *
      * If the dog is barking before 8 or after 22 hours we need to wake up.
+     * All other cases we do not need to wake up.
      * If the hourOfDay is not within 0 - 23 we do not need to wake up.
      *
      * @param barking type boolean it represents if our dog is currently barking or not.
      * @param hourOfDay represents the hour of the day and is of type int with the name hourOfDay and has a valid
      *                  range of 0-23.
-     * @return We have to wake up if the dog is barking before 8 or after 22 hours so in that case return true. In all other cases return false.
+     * @return If we need to wake up or not based on the conditions above.
      */
     public boolean shouldWakeUp(boolean barking, int hourOfDay) {
         return false;
@@ -83,7 +90,7 @@ public class Challenge {
     /***
      * Write a method called printMegaBytesAndKiloBytes that has 1 parameter of type int.
      * The method needs to see how many megabytes are in the given kilobyte and work out the remainder
-     * Then it needs to print a message in the format "XX KB = YY MB and ZZ KB".
+     * Then it needs to return a message in the format "XX KB = YY MB and ZZ KB".
      *
      * If the kiloBytes param is less than 0 return "Invalid value"
      * 1 megaByte = 1024 kiloBytes
