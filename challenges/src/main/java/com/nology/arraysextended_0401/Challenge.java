@@ -10,19 +10,19 @@ public class Challenge {
 
     /**
      *  All of the challenges in the this folder are focused on working with a multidimensional array / nested array.
-     *  To mimic the grid of a noughts and crosses game we are using this data structure.
+     *  This is to mimic the grid of a noughts and crosses game. That is why we are using this data structure.
      *
      * KEY
-     * - -1 (No Move)
-     * - 0 (Naught)
-     * - 1 (Cross)
+     * - -1 = (No Move)
+     * - 0 = (Naught)
+     * - 1 = (Cross)
      *
      * EXAMPLE
      *  int[][] game = {{1, 1, 0},
      *                  {1, 0, 1},
      *                  {-1, 0, -1}}
      *
-     * You may have to use a nested for loop to loop through the nested array.
+     * HINT: You may have to use a nested for loop to loop through the nested array.
      * https://www.programiz.com/java-programming/nested-loop
      */
     public Challenge() {}
