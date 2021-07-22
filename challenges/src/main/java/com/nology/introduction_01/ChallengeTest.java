@@ -18,7 +18,8 @@ class ChallengeTest {
 
     // --------------  FOUNDATION --------------
 
-    // 01 tests for findLargestNumber challenge
+    // Testing findLargestNumber
+
     @Test
     void findLargestNumber_ValidIntegers_ReturnsLargest() {
         int result = challenge.findLargestNumber(22, 25);
@@ -37,7 +38,8 @@ class ChallengeTest {
         assertEquals(-22, result);
     }
 
-    // 02 tests for findLongestString challenge
+    // Testing findLongestString
+
     @Test
     void findLargestString_ValidStrings_ReturnsLongest() {
         String result = challenge.findLongestString("Sam", "Andy");
@@ -50,7 +52,8 @@ class ChallengeTest {
         assertEquals("These two are the same length!", result);
     }
 
-    // 03 tests for getDiscount challenge
+    // Testing getDiscount challenge
+
     @Test
     void getDiscount_ValidInputs_ReturnCorrectDiscount() {
         double result = challenge.getDiscount(100, 10);
@@ -58,66 +61,67 @@ class ChallengeTest {
     }
 
     @Test
-    void getDiscount_ValidInputs_ReturnCorrectDiscountAsDouble() {
+    void getDiscount_ValidInputs_ReturnCorrectDiscountWithDecimals() {
         double result = challenge.getDiscount(27, 5);
         assertEquals(25.65, result);
     }
 
     // -------------- INTERMEDIATE --------------
 
-    // 04 tests for compareTwoNumbers
+    // Testing compareTwoNumbers
+
     @Test
     void compareTwoNumbers_ValidInputsNotEqual_ReturnFalse() {
-        Boolean result = challenge.compareTwoNumbers(12.3333, 12.3343);
+        boolean result = challenge.compareTwoNumbers(12.3333, 12.3343);
         assertFalse(result);
     }
 
     @Test
     void compareTwoNumbers_ValidInputsEqual_ReturnTrue()  {
-        Boolean result = challenge.compareTwoNumbers(1.3333, 1.3333);
+        boolean result = challenge.compareTwoNumbers(1.3333, 1.3333);
         assertTrue(result);
     }
 
-    // 05 tests for getDayName
+    // Testing getDayName
 
     @Test
-    void getDayName_ValidInput0_ReturnSunday() {
+    void getDayName_ValidInput_ReturnSunday() {
         String result = challenge.getDayName(0);
         assertEquals("Sunday", result);
     }
 
     @Test
-    void getDayName_ValidInput1_ReturnMonday() {
+    void getDayName_ValidInput_ReturnMonday() {
         String result = challenge.getDayName(1);
         assertEquals("Monday", result);
     }
 
     @Test
-    void getDayName_ValidInput2_ReturnTuesday() {
+    void getDayName_ValidInput_ReturnTuesday() {
         String result = challenge.getDayName(2);
         assertEquals("Tuesday", result);
     }
 
     @Test
-    void getDayName_ValidInput3_ReturnWednesday() {
+    void getDayName_ValidInput_ReturnWednesday() {
         String result = challenge.getDayName(3);
         assertEquals("Wednesday", result);
     }
 
     @Test
-    void getDayName_ValidInput4_ReturnThursday() {
+    void getDayName_ValidInput_ReturnThursday() {
         String result = challenge.getDayName(4);
         assertEquals("Thursday", result);
     }
 
     @Test
-    void getDayName_ValidInput5_ReturnFriday() {
+    void getDayName_ValidInput_ReturnFriday() {
         String result = challenge.getDayName(5);
         assertEquals("Friday", result);
     }
 
     @Test
-    void getDayName_ValidInput6_ReturnSaturday() {
+    void getDayName_ValidInput_ReturnSaturday() {
         String result = challenge.getDayName(6);
         assertEquals("Saturday", result);
     }
@@ -128,16 +132,16 @@ class ChallengeTest {
         assertEquals("Not a valid day range! The number needs to be from 0-6", result);
     }
 
-    // 06 tests for isEvenWord
+    // Testing isEvenWord
 
     @Test
-    void isEvenWord_ValidInputEven_ReturnsTrue() {
+    void isEvenWord_ValidInput_EvenReturnsTrue() {
         boolean result = challenge.isEvenWord("dice");
         assertTrue(result);
     }
 
     @Test
-    void isEvenWord_ValidInputOdd_ReturnsFalse() {
+    void isEvenWord_ValidInput_OddReturnsFalse() {
         boolean result = challenge.isEvenWord("mouse");
         assertFalse(result);
     }
@@ -150,7 +154,7 @@ class ChallengeTest {
 
     // --------------  ADVANCED --------------
 
-    // 07 tests for leapYearChecker
+    // Testing leapYearChecker
 
     @Test
     void leapYearChecker_ValidInput_ReturnsTrueDivisibleBy4() {

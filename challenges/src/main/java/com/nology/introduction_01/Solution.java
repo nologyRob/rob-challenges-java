@@ -1,5 +1,11 @@
 package com.nology.introduction_01;
 
+/**
+ *   All challenges in this repository are separated into three levels: Foundation, Intermediate, and Advanced.
+ *   The expectation is to complete all Foundation level challenges, with Intermediate and upwards pushing your knowledge
+ *   and may require you to google things in order to solve them. If you find an answer online somewhere, be kind and
+ *   share it with the group!
+ */
 public class Solution {
 
     public Solution() {}
