@@ -1,7 +1,7 @@
 package com.nology.arraysloops_04;
 
 /**
- *   All challenges in this repository are seperated into three levels: Foundation, Intermediate, and Advanced.
+ *   All challenges in this repository are separated into three levels: Foundation, Intermediate, and Advanced.
  *   The expectation is to complete all Foundation level challenges, with Intermediate and upwards pushing your knowledge
  *   and may require you to google things in order to solve them. If you find an answer online somewhere, be kind and
  *   share it with the group!
@@ -13,7 +13,10 @@ public class Challenge {
     // -------------- FOUNDATION --------------
 
     /***
-     * Get the first and last items in an array
+     * Get the first and last items in an given string array.
+     *
+     * If a the given array's length is 0 return an empty string array.
+     *
      * @param namesArr e.g. ["Ollie", "Sam", "Bex"]
      * @return a new array containing the first and last items in the given array e.g. ["Ollie", "Bex"]
      */
@@ -22,7 +25,8 @@ public class Challenge {
     }
 
     /***
-     * Find the SUM/Total of an array of peoples ages
+     * Find the SUM/Total of an array of peoples ages.
+     *
      * @param agesArr e.g. [18, 25, 21, 40]
      * @return an amount e.g. 104
      */
@@ -31,7 +35,8 @@ public class Challenge {
     }
 
     /***
-     * Find the amount of odd numbers from a given array of numbers
+     * Find the amount of odd numbers from a given array of numbers.
+     *
      * @param numbersArr e.g. [5, 3, 8, 10, 1]
      * @return Amount of odd numbers e.g. 3
      */
@@ -42,10 +47,14 @@ public class Challenge {
     // -------------- INTERMEDIATE --------------
 
     /***
-     * Find all numbers between a min and a max value
+     * Find all numbers between a min and a max value and return them in an array.
+     * The min at the start and the max at the end of the returned array.
+     *
+     * If the min is greater than the max return a empty integer array.
+     *
      * @param min - The starting range value e.g. 3
      * @param max - The ending/finishing range value e.g. 6
-     * @return a new array of all numbers between two numbers e.g. [3, 4, 5, 6]
+     * @return a new array of all numbers between and including the min and max number. e.g. [3, 4, 5, 6]
      */
     public int[] getRange(int min, int max) {
         return new int[] {};
@@ -61,7 +70,11 @@ public class Challenge {
     }
 
     /***
-     * Determine whether a score is the highest score
+     * Determine whether a given score is the highest score out of a array of scores.
+     *
+     * Can you use a for-each loop?
+     * https://www.w3schools.com/java/java_for_loop.asp
+     *
      * @param scoresArr e.g. [3, 10, 2, 8]
      * @param newScore e.g. 11
      * @return true or false depending on whether the newScore is the highest value in the array
@@ -73,7 +86,7 @@ public class Challenge {
     // -------------- ADVANCED --------------
 
     /***
-     * Given an array of numbers, sort these numbers by comparing adjacent numbers. K
+     * Given an array of numbers, sort these numbers numerically lowest to highest by comparing adjacent numbers.
      *
      * NOTE: Your code should work by repeatedly swapping the adjacent elements if they are in wrong order.
      * Example:
@@ -83,8 +96,11 @@ public class Challenge {
      * ( 1 4 5 2 8 ) –>  ( 1 4 2 5 8 ), Swap since 5 > 2
      * ( 1 4 2 5 8 ) –> ( 1 4 2 5 8 ), Now, since these elements are already in order (8 > 5), algorithm does not swap them
      *
+     * HINT: Can you use a nested for loop?
+     * https://www.programiz.com/java-programming/nested-loop
+     *
      * @param numbersArr - array of numbers e.g. [5, 1, 4, 2, 8]
-     * @return The sorted array of numbers
+     * @return The sorted array of numbers e.g. [1, 2, 4, 5, 8]
      */
     public int[] sort(int[] numbersArr) {
         return new int[] {};
