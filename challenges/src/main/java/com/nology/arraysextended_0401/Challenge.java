@@ -69,7 +69,7 @@ public class Challenge {
      *
      * @param game - Two Dimensional arrays contains -1 (No Move), 0 (Naught), 1 (Cross)
      * @param player - 0 (Naught) or 1 (cross)
-     * @return If the given player has won or not
+     * @return If the given player has horizontally won or not
      */
     public boolean hasPlayerWonHorizontal(int[][] game, int player) {
         return false;
@@ -82,7 +82,7 @@ public class Challenge {
      *
      * @param game - Two Dimensional arrays contains -1 (No Move), 0 (Naught), 1 (Cross)
      * @param player - 0 (Naught) or 1 (cross)
-     * @return If the player has won or not
+     * @return If the player has vertically won or not
      */
     public boolean hasPlayerWonVertical(int[][] game, int player) {
         return false;
@@ -93,7 +93,7 @@ public class Challenge {
      *
      * @param game - Two Dimensional arrays contains -1 (No Move), 0 (Naught), 1 (Cross)
      * @param player - 0 (Naught) or 1 (cross)
-     * @return If the player has won or not
+     * @return If the player has diagonally won or not
      */
     public boolean hasPlayerWonDiagonally(int[][] game, int player) {
         return false;
