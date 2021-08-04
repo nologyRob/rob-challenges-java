@@ -47,27 +47,14 @@ public class ChallengeTest {
 
     // 5 - Write a positive test below
     //     NOTE: "updateScore" method is in UserRepository class
-    public void updateScore_ValidUser_UpdatesUserScore() {
+    public void setScore_ValidUser_UpdatesUserScore() {
         // ... Write your code here
     }
 
     // 6 - Write a negative test below
     //     NOTE: "updateScore" method is in UserRepository class
-    public void updateScore_BadScore_ThrowsIllegalArgumentException() {
+    public void setScore_BadScore_ThrowsIllegalArgumentException() {
         // ... Write your code here
-    }
-
-    // -------------- Advanced  --------------
-
-    // 7 - Write a positive test below
-    //     NOTE: "updateUser" method is in UserController class.. For this
-    //           task you should inject a mocked "UserRepository" called "MockUserRepository".
-    //           The benefit of this is that the "actual" users wont be affected
-    //           .. #1 You'll need create an IUserRepository interface.
-    //           .. #2 MockUserRepository and UserRepository will need to implement this interface
-    //           .. The rest is up to you :)
-    public void updateUser_ValidUser_ReturnsSuccessMessage() {
-
     }
 
 }

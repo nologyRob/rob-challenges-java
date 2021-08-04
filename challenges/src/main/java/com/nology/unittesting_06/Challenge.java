@@ -33,9 +33,9 @@ public class Challenge {
     /**
      * Inside ChallengeTest.java, write "positive" & "negative" tests for the following function
      *
-     * @param firstName -
-     * @param lastName -
-     * @return
+     * @param firstName - Person's First Name
+     * @param lastName - Person's Last Name
+     * @return The full name of the person
      */
     public String getFullName(String firstName, String lastName) {
         // ... This needs changing to work with null values
@@ -43,14 +43,13 @@ public class Challenge {
     }
 
     /**
-     * ... Extra challenge inside UserRepository
+     * Final Challenge is writting a test for the User.java setScore function.. Checkout ChallengeTest.java
+     * and User.java to understand more :)
      * */
 
-    // -------------- Advanced  --------------
-
     /**
-     * ... Extra challenge inside UserController
-     */
-
+     * Extra Challenges for early finishers.. Write negative tests for the first two methods :)
+     * Think what code might need to be altered
+     * */
 
 }

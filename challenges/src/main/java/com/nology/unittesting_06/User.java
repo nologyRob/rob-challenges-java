@@ -19,6 +19,7 @@ public class User {
     }
 
     public void setScore(int score) {
+        // ... How can we change this to cope with bad/negative/null inputs?
         this.score = score;
     }
 

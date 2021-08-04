@@ -57,21 +57,19 @@ public class SolutionTest {
     }
 
     @Test
-    public void updateScore_ValidUser_UpdatesUserScore() {
+    public void setScore_ValidUser_UpdatesUserScore() {
         // Arrange
-        UserRepository repo = new UserRepository();
         User updatedUser = new User("johndoe");
-        updatedUser.setScore(10);
 
         // Act
-        User result = repo.updateScore(updatedUser);
+        updatedUser.setScore(10);
 
         // Assert
-        assertEquals(10, result.getScore());
+        assertEquals(10, updatedUser.getScore());
     }
 
     @Test
-    public void updateScore_BadScore_ThrowsIllegalArgumentException() {
+    public void setScore_BadScore_ThrowsIllegalArgumentException() {
         // Arrange
         UserRepository repo = new UserRepository();
         User updatedUser = new User("johndoe");
@@ -82,31 +80,4 @@ public class SolutionTest {
         // Assert
         assertThrows(IllegalArgumentException.class, () -> repo.updateScore(updatedUser));
     }
-
-    // -------------- Advanced  --------------
-
-    @Test
-    public void updateUser_ValidUser_ReturnsSuccessMessage() {
-        /**
-         * UserController.java
-         *
-         * Change the constructor to the following
-         * constructor (IUserRepository repository) {
-         *
-         * UserRepository.java
-         *
-         * Change the class declaration to
-         * class UserRepository implements IUserRepository
-         *
-         * MockUserRepository.java
-         *
-         * Create this mocked repository which also implements IUserRepository
-         *
-         * .. Done! The benefit of mocking dependencies is that you don't have to
-         * modify actual data but fake/mocked data. This wasn't quite the case here
-         * but sit tight, once we are into databases it'll make sense.. Any questions
-         * ask a coach/Andy
-          */
-    }
-
 }
