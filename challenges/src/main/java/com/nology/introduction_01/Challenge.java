@@ -73,7 +73,7 @@ public class Challenge {
      * EXTENSION Use a switch?
      * https://www.w3schools.com/java/java_switch.asp
      *
-     * @param day a Integer from 1-7 (that corresponds to the days of the week)
+     * @param day a Integer from 0-6 (that corresponds to the days of the week)
      * @return the day that corresponds to the number that was passed to the method as a parameter or "Not a valid
      * day range! The number needs to be from 0-6" if param passed is outside of the range
      */
