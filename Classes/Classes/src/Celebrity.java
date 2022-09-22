@@ -1,0 +1,1 @@
+import java.util.Date;public class Celebrity {    String firstName;    String lastName;    int age;    boolean isAnActor;    Date dateOfBirth;    void signAutograph(){        System.out.println("sign sign sign");    }    void hitsTheRedCarpet(){        System.out.println("Walk walk walk walk");    }}

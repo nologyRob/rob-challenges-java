@@ -121,6 +121,27 @@ public class Challenge {
      * @return returns the total amount after x number of years (including the initial investment)
      */
     public String calculateReturn(int initialInvestment, int years, double rateOfInterest) {
-        return "";
+        if(years <= 0){
+            return "Invalid years";
+        } else if (initialInvestment <= 0) {
+            return "Invalid investment";
+        } else if (rateOfInterest >=1 || rateOfInterest <0 ){
+            return "Invalid rate of interest";
+        }
+
+        double runningTotal = 0;
+
+
+        for (int i = 0; i < years ; i++) {
+            if (i == 0){
+                runningTotal = initialInvestment + (initialInvestment*rateOfInterest);
+            } else {
+                runningTotal = runningTotal + (runningTotal*rateOfInterest);
+            }
+        }
+
+
+
+        return "You now have " + Math.round(runningTotal);
     }
 }

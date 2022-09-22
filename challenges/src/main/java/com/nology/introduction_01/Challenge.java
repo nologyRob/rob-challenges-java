@@ -21,8 +21,7 @@ public class Challenge {
      * @return returns the larger of the 2 numbers passed as paramters
      */
     public int findLargestNumber(int num1, int num2) {
-        // Write your solution here
-        return -1;
+        return Math.max(num1, num2);
     }
 
     /***
